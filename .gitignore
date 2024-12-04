@@ -1,0 +1,4 @@
+EmailConfig.php
+vendor/
+composer.lock
+.env

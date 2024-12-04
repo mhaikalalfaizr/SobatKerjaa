@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #224fee;
+    --secondary-color: #005fa8;
+    --background-color: #dae7ff;
+    --text-color: #171a1f;
+    --gray-color: #323743;
+    --font-inter: 'Inter', sans-serif;
+    --font-archivo: 'Archivo', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+    background: var(--background-color);
+}
+
+.navbar {
+    background-color: #dae7ff;
+    padding: 0.7rem 0; /* Compact height for the navbar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px; /* Centralized content */
+    margin: 0 auto;
+    padding: 0rem; /* Reduced horizontal padding */
+}
+
+.navbar .brand-icon {
+    height: 40px; /* Adjusted height for smaller logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.navbar .brand-text {
+    height: 30px;
+    width: auto; /* Keep text logo proportional */
+    margin-left: 0rem; /* Space between icon and text */
+}
+
+.nav-links {
+    display: flex;
+    gap: 5rem; /* Spacing between links */
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: var(--font-archivo);
+    font-size: 16px; /* Font size adjustment */
+    font-weight: 600;
+    color: var(--gray-color);
+    padding: 0.2rem 5rem; /* Reduced padding */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.6rem; /* Reduced gap between buttons */
+}
+
+.btn-login, .btn-register {
+    padding: 0.4rem 1.2rem; /* Adjusted padding for proportion */
+    border-radius: 6px;
+    font-size: 14px; /* Slightly smaller font size */
+    font-weight: 600;
+}
+
+.btn-login {
+    background: white;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    text-decoration: none;
+}
+
+.btn-register {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on smaller screens */
+    }
+    .navbar .container {
+        justify-content: space-between;
+    }
+    .auth-buttons {
+        gap: 0.4rem; /* Further reduce gap for small screens */
+    }
+}
+
+
+.register-main {
+    display: flex;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.register-left {
+    flex: 1;
+    background: #455ab5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.register-right {
+    flex: 1;
+    background: #d6285b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.register-main h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.register-main p {
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.register-main a {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background: #192841;
+    color: white;
+    padding: 2rem 0;
+    font-size: 0.75rem; /* Ukuran font kecil */
+    margin-top: auto; /* Dorong footer ke bawah */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Equal columns */
+    gap: 2rem; /* Space between columns */
+    max-width: 1500px; /* Centralize the footer width */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-content > div:nth-child(1) {
+    text-align: left; /* Align the first section to the left */
+}
+
+.footer-content > div:nth-child(2) {
+    text-align: center; /* Center-align the "Tentang Kami" section */
+}
+
+.footer-content > div:nth-child(3) {
+    text-align: right; /* Align the third section to the right */
+}
+
+.footer-content h3 {
+    font-size: 0.85rem; /* Kecilkan ukuran heading footer */
+    margin-bottom: 0.5rem; /* Jarak antara heading dan konten */
+}
+
+.footer-content p,
+.footer-links li {
+    font-size: 0.75rem; /* Kecilkan font konten footer */
+    line-height: 1.5; /* Tinggi baris untuk keterbacaan */
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none; /* Hapus bullet point */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.3rem; /* Jarak antar link */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.75rem; /* Kecilkan font link */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem; /* Kecilkan font copyright */
+    line-height: 1.4; /* Tambahkan keterbacaan */
+}
